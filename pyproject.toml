@@ -1,0 +1,15 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+[project]
+name = "voicedata-lab"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = []
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+voice = ["faster-whisper>=1"]
+[project.scripts]
+voicedata = "voicedata.core:main"
+[tool.setuptools.packages.find]
+where = ["src"]
